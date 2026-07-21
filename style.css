@@ -47,6 +47,7 @@ td {
 td:hover {
     background-image: url(images/hintergrund\ text.png);
     background-position: center;
+    border-radius: 10px;
     scale: 1.03;
     cursor: pointer;
     color: black;
