@@ -2,6 +2,9 @@
 
 body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image: url(images/Designer.png);
+    color: rgb(214, 172, 204);
+    
 }
 
 
@@ -9,28 +12,47 @@ body {
 
 .heute {
     border: 3px solid black;
-    background-color: gold;
-
-
-
+    background-image: url(images/hintergrund\ text.png);
+    background-position: center;
+    font-size: bold;
+    color: black;
+    
 }
 
 table {
     border-collapse: collapse;   
-    width: 80%;
+    width: 50%;
     text-align: center;
     border: 3px solid black;
     border-radius: 10px;
     margin: auto;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
 }
 
 th, td {  
-    border: 3px solid black;
+    border: 5px solid black;
     padding: 10px;
+    color: white;
+    
+}
+
+td {
+     transition: background-color 0.5s ease,                       
+                 transform 0.5s ease; 
+}
+
+
+td:hover {
+    background-image: url(images/hintergrund\ text.png);
+    background-position: center;
+    scale: 1.03;
+    cursor: pointer;
+    color: black;
+
 }
 
 th {
-    background-color: gray;
+    
 }
 
 .wichtige_überschrift {
@@ -44,5 +66,24 @@ th {
     margin-left: auto;
     margin-right: auto;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+    background-image: url(images/hintergrund\ überschrift.png);
+    background-position: center;
+   
+    
+}
+
+.wichtiger_text {
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+    padding: 5px;
+    background-image: url(images/hintergrund\ überschrift.png);
+    background-position: center;
+    width: 70%
+    
 }
 
