@@ -1,22 +1,20 @@
 
 
 body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-image: url(images/Designer.png);
-    background-position: center;
-    color: whitesmoke;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;         /* Schriftart der ganzen Seite */
+    background-image: url(images/Designer.png);                                     /* Hintergrund der ganzen Seite */
+    background-position: center;                                                    /* Ausrichtung des Hintergrundbildes */
+    color: whitesmoke;                                                            /* Schriftfarbe */
 }
 
 
 
 
 .heute {
-    border: 3px solid black;
-    background-image: url(images/hintergrund\ text.png);
-    background-position: center;
-    font-size: bold;
     color: black;
-    
+    border: 3px solid black;                                                      /* Rahmen für den heutigen Tat */
+    background-image: url(images/hintergrund\ text.png);                            /* Hintergrund für den heutigen Tag */
+    background-position: center;                                                    /* Ausrichtung des Hintergrundbildes */                                                                /
 }
 
 table {
