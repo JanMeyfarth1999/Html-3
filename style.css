@@ -31,7 +31,6 @@ th, td {
     border: 5px solid black;
     padding: 10px;
     color: white;
-    
 }
 
 td {
@@ -47,12 +46,10 @@ td:hover {
     scale: 1.03;
     cursor: pointer;
     color: black;
-
 }
 
 th {
-    
-}
+    }
 
 .wichtige_überschrift {
     border: 3px solid black;
@@ -67,8 +64,6 @@ th {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
     background-image: url(images/hintergrund\ überschrift.png);
     background-position: center;
-   
-    
 }
 
 .wichtiger_text {
@@ -83,12 +78,9 @@ th {
     background-image: url(images/hintergrund\ überschrift.png);
     background-position: center;
     width: 70%
-    
 }
 
 li {
     margin-bottom: 10px;
-
-
 }
 
