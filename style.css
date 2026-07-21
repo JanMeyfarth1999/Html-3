@@ -3,7 +3,9 @@
 body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-image: url(images/Designer.png);
-    color: rgb(214, 172, 204);
+    background-position: center;
+    color: whitesmoke;
+
     
 }
 
@@ -26,7 +28,7 @@ table {
     border: 3px solid black;
     border-radius: 10px;
     margin: auto;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
 }
 
 th, td {  
@@ -65,7 +67,7 @@ th {
     width: 30%;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
     background-image: url(images/hintergrund\ überschrift.png);
     background-position: center;
    
@@ -85,5 +87,11 @@ th {
     background-position: center;
     width: 70%
     
+}
+
+li {
+    margin-bottom: 10px;
+
+
 }
 
