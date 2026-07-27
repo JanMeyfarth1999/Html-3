@@ -6,17 +6,6 @@ body {
     background-position: center;                                                    /* Ausrichtung des Hintergrundbildes */
     color: whitesmoke;                                                            /* Schriftfarbe */
 }
-
-
-
-
-.heute {
-    color: black;
-    border: 3px solid black;                                                      /* Rahmen für den heutigen Tat */
-    background-image: url(images/hintergrund\ text.png);                            /* Hintergrund für den heutigen Tag */
-    background-position: center;                                                    /* Ausrichtung des Hintergrundbildes */                                                                /
-}
-
 table {
     border-collapse: collapse;   
     width: 50%;
@@ -26,19 +15,15 @@ table {
     margin: auto;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
 }
-
 th, td {  
     border: 5px solid black;
     padding: 10px;
     color: white;
 }
-
 td {
      transition: background-color 0.5s ease,                       
                  transform 0.5s ease; 
 }
-
-
 td:hover {
     background-image: url(images/hintergrund\ text.png);
     background-position: center;
@@ -47,10 +32,11 @@ td:hover {
     cursor: pointer;
     color: black;
 }
-
 th {
     }
-
+li {
+    margin-bottom: 10px;
+}    
 .wichtige_überschrift {
     border: 3px solid black;
     padding: 10px;
@@ -65,7 +51,6 @@ th {
     background-image: url(images/hintergrund\ überschrift.png);
     background-position: center;
 }
-
 .wichtiger_text {
     text-align: center;
     border: 3px solid black;
@@ -79,10 +64,13 @@ th {
     background-position: center;
     width: 70%
 }
-
-li {
-    margin-bottom: 10px;
+.heute {
+    color: black;
+    border: 3px solid black;                                                      /* Rahmen für den heutigen Tat */
+    background-image: url(images/hintergrund\ text.png);                            /* Hintergrund für den heutigen Tag */
+    background-position: center;                                                    /* Ausrichtung des Hintergrundbildes */                                                                /
 }
+
 
 
 
