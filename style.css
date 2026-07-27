@@ -70,6 +70,12 @@ li {
     background-image: url(images/hintergrund\ text.png);                            /* Hintergrund für den heutigen Tag */
     background-position: center;                                                    /* Ausrichtung des Hintergrundbildes */                                                                /
 }
+.samstag {
+    color: green
+}
+.sonntag {
+    color: red
+}
 
 
 
