@@ -17,12 +17,20 @@ const wochentage = [
 const wochtag = wochentage[heute.getDay()];
 // Monate
 const Monate = [
-    "
-",
-
-   
-
-]
+    "Januar",
+    "Februar",
+    "März",
+    "April",
+    "Mai",
+    "Juni",
+    "Juli",
+    "August",
+    "September",
+    "Oktober", 
+    "November",
+    "Dezember",
+];
+const 
 
 
 
