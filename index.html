@@ -6,7 +6,7 @@
         </head>
             <body>
                     <h1 class="wichtige_überschrift", id="main-headline">Kalender Datenblatt vom 21.07.2026</h1>
-                            <p class="wichtiger_text", id="info">Der 21.07.2026 ist ein Dienstag, es ist nicht so warm wie die letzten Tage und es sind auch den rest der Woche keine hohen Temperaturen mehr zu erwarten.</p>
+                            <p class="wichtiger_text", id="Tagesinfo">Der 21.07.2026 ist ein Dienstag, es ist nicht so warm wie die letzten Tage und es sind auch den rest der Woche keine hohen Temperaturen mehr zu erwarten.</p>
                                 <table id="kalender">
                                         <thead>
                                             <th>Mo</th>
@@ -74,5 +74,17 @@
                                                         <li>1969: Erste Mondlandung. Die Apollo-11-Mondfähre „Eagle“ landet auf dem Mond. Neil Armstrong und Buzz Aldrin schreiben Raumfahrtgeschichte.</li>
                                                         <li>1976: Viking 1 sendet Bilder vom Mars. Die US-Raumsonde Viking 1 übermittelt spektakuläre Aufnahmen der Marsoberfläche zur Erde</li>
                                                     </ul>
-                                                        <script src="main.js"></script>                
+                                                        <script>
+                                                            const heute = new Date();
+                                                            const datum = heute.toLocaleDateString("de-DE");
+
+                                                            document.getElementById("main-headline").textContent = 
+                                                            "Kalender Datenblatt vom " + datum;
+
+
+
+
+
+
+                                                        </script>                
             </body>        
