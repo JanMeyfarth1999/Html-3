@@ -49,7 +49,7 @@ const tagMonat = heute.toLocaleDateString(
     {
         day: "2-digit",
         month: "2-digit"
-    }
+    } 
 );
 document.getElementById("headline2").textContent = 
 "Historische Ereignisse am " + tagMonat;
