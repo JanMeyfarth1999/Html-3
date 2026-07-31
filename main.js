@@ -10,7 +10,7 @@ const wochentage = [
     "Sonntag",
     "Montag",
     "Dienstag",
-    "Mittwoch",
+    "Mittwoch",   
     "Donnerstag",
     "Freitag",
     "Samstag",
