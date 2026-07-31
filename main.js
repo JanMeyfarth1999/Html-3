@@ -54,32 +54,63 @@ const tagMonat = heute.toLocaleDateString(
 document.getElementById("headline2").textContent = 
 "Historische Ereignisse am " + tagMonat;
 
-//Tabelle
-const kalenderBody = document.getElementById("kalender-body");
-kalenderBody.innerHTML = "";
-const jahr = heute.getFullYear();
-const monat = heute.getMonth();
-const tageImMonat = new Date(    
-    jahr,   
-    monat + 1,
-    0    
-).getDate();
-const ersterTag = new Date(
-    jahr,   
-    monat,    
-    1
-).getDay();
-// Sonntag = 0 → Montag = 0
-const startTag =    
-ersterTag === 0 ? 6 : ersterTag - 1;
-let zeile = document.createElement("tr");
-// Leere Felder vor dem Monatsanfang
-for (let i = 0; i < startTag; i++) {
-    const leereZelle =       
-        document.createElement("td");
-zeile.appendChild(leereZelle);
 
-// Tage erzeugen38for (let tag = 1; tag <= tageImMonat; tag++) {39 40    const zelle =41        document.createElement("td");42 43    zelle.textContent = tag;44 45    // Heutigen Tag markieren46    if (47        tag === heute.getDate()48    ) {49        zelle.classList.add("heute");50    }51 52    zeile.appendChild(zelle);53 54    // Neue Zeile nach Sonntag55    if (56        (startTag + tag) % 7 === 057    ) {58        kalenderBody.appendChild(zeile);59 60        zeile =61            document.createElement("tr");62    }63}64 65// Letzte Zeile anhängen66if (zeile.children.length > 0) {67    kalenderBody.appendChild(zeile);68}
+
+    // ===== Dynamischer Kalender =====
+    const kalenderBody = document.getElementById("kalender-body");
+    kalenderBody.innerHTML = "";
+    const jahr = heute.getFullYear();
+    const monat = heute.getMonth();
+    const tageImMonat =
+    new Date(jahr, monat + 1, 0).getDate();
+    const ersterTag =
+    new Date(jahr, monat, 1).getDay();
+    // Montag = erster Tag der Woche
+    const startTag =
+    ersterTag === 0 ? 6 : ersterTag - 1;
+    let zeile = document.createElement("tr");
+    // Leere Felder vor Monatsbeginn
+        for (let i = 0; i < startTag; i++) {
+    const leereZelle =
+    document.createElement("td");
+    zeile.appendChild(leereZelle);
+    }
+    // Alle Tage des Monats erzeugen
+        for (let tag = 1; tag <= tageImMonat; tag++) {
+    const zelle =
+    document.createElement("td");
+    zelle.textContent = tag;
+    // Heutigen Tag markieren
+        if (tag === heute.getDate()) {
+    zelle.classList.add("heute");
+    }
+    // Samstag grün
+        if (zeile.children.length === 5) {
+    zelle.classList.add("samstag");
+    }
+    // Sonntag rot
+        if (zeile.children.length === 6) {
+    zelle.classList.add("sonntag");
+    }
+    zeile.appendChild(zelle);
+    // Nach 7 Tagen neue Woche beginnen
+        if (zeile.children.length === 7) {
+    kalenderBody.appendChild(zeile);
+    zeile = document.createElement("tr");
+        }
+    }
+    // Leere Felder nach Monatsende
+        if (zeile.children.length > 0) {
+        while (zeile.children.length < 7) {
+    const leereZelle =
+    document.createElement("td");
+    zeile.appendChild(leereZelle);
+    }
+    kalenderBody.appendChild(zeile);
+
+}
+
+
 
             
 
