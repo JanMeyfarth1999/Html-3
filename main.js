@@ -80,6 +80,42 @@ document.getElementById("headline2").textContent =
     const zelle =
     document.createElement("td");
     zelle.textContent = tag;
+    // Dynamische Feiertage
+    const monatText =
+    String(monat +1).padStart(2, "0");
+    const tagText =
+    String(tag).padStart(2, "0");
+    const aktuellesDatum = `${jahr}-${monatText}-${tagText}`; 
+    const feiertageHessen = [
+        "2026-10-03",
+        "2026-12-25",
+        "2026-12-26",
+        // 2027
+        "2027-01-01",
+        "2027-03-26",
+        "2027-03-29",
+        "2027-05-01",
+        "2027-05-06",
+        "2027-05-17",
+        "2027-05-27",
+        "2027-10-03",
+        "2027-12-25",
+        "2027-12-26",
+        // 2028
+        "2028-01-01",
+        "2028-04-14",
+        "2028-04-17",
+        "2028-05-01",
+        "2028-05-25",
+        "2028-06-05",
+        "2028-06-15",
+        "2028-10-03",
+        "2028-12-25",
+        "2028-12-26"
+    ];
+       if(feiertageHessen.includes(aktuellesDatum)) {
+        zelle.classList.add("feiertag");
+    }
     // Heutigen Tag markieren
         if (tag === heute.getDate()) {
     zelle.classList.add("heute");
