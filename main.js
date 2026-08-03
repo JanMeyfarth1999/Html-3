@@ -145,7 +145,16 @@ document.getElementById("headline2").textContent =
     kalenderBody.appendChild(zeile);
 
 }
-
+const textmonat = heute.getDate();
+const texttag   = heute.getMonth() +1;
+    const url =
+        `https://api.wikimedia.org/feed/v1/wikipedia/de/onthisday/events/${textmonat}/${texttag}`;
+            console.log(url);
+                fetch(url)
+                    .then(respone => respone.json())
+                        .then(daten => {
+                            console.log(daten);
+    });
 
 
             
