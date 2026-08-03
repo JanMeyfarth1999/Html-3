@@ -153,7 +153,7 @@ const texttag   = heute.getMonth() +1;
                 fetch(url)
                     .then(respone => respone.json())
                         .then(daten => {
-                            console.log(daten);
+                            console.log(daten.events)[0];
     });
 
 
