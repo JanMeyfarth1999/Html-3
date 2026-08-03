@@ -3,7 +3,9 @@
 body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;         /* Schriftart der ganzen Seite */    
     background-image: url(images/Designer.png);                                     /* Hintergrund der ganzen Seite */
+    background-size: cover;
     background-position: center;                                                    /* Ausrichtung des Hintergrundbildes */
+    background-repeat: no-repeat;
     color: whitesmoke;                                                            /* Schriftfarbe */
 }
 table {
