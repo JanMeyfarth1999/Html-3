@@ -2,7 +2,7 @@
 const heute = new Date();
 const datum = heute.toLocaleDateString("de-DE");
  document.getElementById("main-headline").textContent =
-"Tagesbericht vom " + datum;
+"Kalenderdatenblatt vom " + datum;
 
 // <p>
 //Wochentage
