@@ -1,7 +1,7 @@
 
 
 body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;         /* Schriftart der ganzen Seite */    
+    font-family: "Orbitron", sans-serif;                                            /* Schriftart der ganzen Seite */    
     background-image: url(images/Designer.png);                                     /* Hintergrund der ganzen Seite */
     background-size: cover;
     background-position: center;                                                    /* Ausrichtung des Hintergrundbildes */
@@ -13,7 +13,7 @@ table {
     background-color: rgba(45, 63, 145, 0.4);  
     width: 50%;
     text-align: center;
-    border: 3px solid black;
+    border: 3px solid black;                                                       /* Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
     border-radius: 10px;
     margin: auto;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
@@ -74,11 +74,16 @@ li {
     background-position: center;                                                    /* Ausrichtung des Hintergrundbildes */                                                                /
 }
 .samstag {
-    color: green
+    background-image: url(images/Samstag.png);
+    background-position: center;
+    
 }
 .sonntag {
-    color: red
+    background-image: url(images/Sonntag.png);
+    background-position: center;
+    
 }
+
 
 .feiertag {
     color: yellow

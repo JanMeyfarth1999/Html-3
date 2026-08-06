@@ -1,8 +1,8 @@
 // Überschrift
 const heute = new Date();
 const datum = heute.toLocaleDateString("de-DE");
- document.getElementById("main-headline").textContent =
-"Kalenderdatenblatt vom " + datum;
+document.getElementById("main-headline").textContent =
+    "Kalenderdatenblatt vom " + datum;
 
 // <p>
 //Wochentage
@@ -10,7 +10,7 @@ const wochentage = [
     "Sonntag",
     "Montag",
     "Dienstag",
-    "Mittwoch",   
+    "Mittwoch",
     "Donnerstag",
     "Freitag",
     "Samstag",
@@ -27,7 +27,7 @@ const Monate = [
     "Juli",
     "August",
     "September",
-    "Oktober", 
+    "Oktober",
     "November",
     "Dezember",
 ];
@@ -40,7 +40,7 @@ const tag = heute.getDate();
 const wiviwochentag = Math.ceil(tag / 7);
 // angezeigter Text im Web
 const Text =
-`Der ${datum} ist ein ${wochentag}, um genau zu sein der ${wiviwochentag}. ${wochentag} im Monat ${Monatsname} des Jahres ${Jahr}.`;
+    `Der ${datum} ist ein ${wochentag}, um genau zu sein der ${wiviwochentag}. ${wochentag} im Monat ${Monatsname} des Jahres ${Jahr}.`;
 document.getElementById("Tagesinfo").textContent = Text;
 
 //h2
@@ -49,43 +49,44 @@ const tagMonat = heute.toLocaleDateString(
     {
         day: "2-digit",
         month: "2-digit"
-    } 
-);
-document.getElementById("headline2").textContent = 
-"Historische Ereignisse am " + tagMonat;
-
-
-
-    // ===== Dynamischer Kalender =====
-    const kalenderBody = document.getElementById("kalender-body");
-    kalenderBody.innerHTML = "";
-    const jahr = heute.getFullYear();
-    const monat = heute.getMonth();
-    const tageImMonat =
-    new Date(jahr, monat + 1, 0).getDate();
-    const ersterTag =
-    new Date(jahr, monat, 1).getDay();
-    // Montag = erster Tag der Woche
-    const startTag =
-    ersterTag === 0 ? 6 : ersterTag - 1;
-    let zeile = document.createElement("tr");
-    // Leere Felder vor Monatsbeginn
-        for (let i = 0; i < startTag; i++) {
-    const leereZelle =
-    document.createElement("td");
-    zeile.appendChild(leereZelle);
     }
-    // Alle Tage des Monats erzeugen
-        for (let tag = 1; tag <= tageImMonat; tag++) {
+);
+document.getElementById("headline2").textContent =
+    "Historische Ereignisse am " + tagMonat;
+
+
+
+// ===== Dynamischer Kalender =====
+const kalenderBody = document.getElementById("kalender-body");
+kalenderBody.innerHTML = "";
+const jahr = heute.getFullYear();
+const monat = heute.getMonth();
+const tageImMonat =
+    new Date(jahr, monat + 1, 0).getDate();
+const ersterTag =
+    new Date(jahr, monat, 1).getDay();
+// Montag = erster Tag der Woche
+const startTag =
+    ersterTag === 0 ? 6 : ersterTag - 1;
+let zeile = document.createElement("tr");
+// Leere Felder vor Monatsbeginn
+for (let i = 0; i < startTag; i++) {
+    const leereZelle =
+        document.createElement("td");
+    zeile.appendChild(leereZelle);
+}
+
+// Alle Tage des Monats erzeugen
+for (let tag = 1; tag <= tageImMonat; tag++) {
     const zelle =
-    document.createElement("td");
+        document.createElement("td");
     zelle.textContent = tag;
     // Dynamische Feiertage
     const monatText =
-    String(monat +1).padStart(2, "0");
+        String(monat + 1).padStart(2, "0");
     const tagText =
-    String(tag).padStart(2, "0");
-    const aktuellesDatum = `${jahr}-${monatText}-${tagText}`; 
+        String(tag).padStart(2, "0");
+    const aktuellesDatum = `${jahr}-${monatText}-${tagText}`;
     const feiertageHessen = [
         "2026-10-03",
         "2026-12-25",
@@ -113,51 +114,54 @@ document.getElementById("headline2").textContent =
         "2028-12-25",
         "2028-12-26"
     ];
-       if(feiertageHessen.includes(aktuellesDatum)) {
+    if (feiertageHessen.includes(aktuellesDatum)) {
         zelle.classList.add("feiertag");
     }
     // Heutigen Tag markieren
-        if (tag === heute.getDate()) {
-    zelle.classList.add("heute");
+    if (tag === heute.getDate()) {
+        zelle.classList.add("heute");
     }
-    // Samstag grün
-        if (zeile.children.length === 5) {
-    zelle.classList.add("samstag");
+    // Samstag blau
+    if (zeile.children.length === 5) {
+        zelle.classList.add("samstag");
     }
     // Sonntag rot
-        if (zeile.children.length === 6) {
-    zelle.classList.add("sonntag");
+    if (zeile.children.length === 6) {
+        zelle.classList.add("sonntag");
     }
     zeile.appendChild(zelle);
     // Nach 7 Tagen neue Woche beginnen
-        if (zeile.children.length === 7) {
-    kalenderBody.appendChild(zeile);
-    zeile = document.createElement("tr");
-        }
+    if (zeile.children.length === 7) {
+        kalenderBody.appendChild(zeile);
+        zeile = document.createElement("tr");
     }
+}
     // Leere Felder nach Monatsende
-        if (zeile.children.length > 0) {
+    if (zeile.children.length > 0) {
+
         while (zeile.children.length < 7) {
-    const leereZelle =
-    document.createElement("td");
-    zeile.appendChild(leereZelle);
+            const leereZelle = document.createElement("td");
+   //Samstag
+    if (zeile.children.length === 5) {
+        leereZelle.classList.add("samstag");
     }
+    //Sonntag
+    if(zeile.children.length === 6) {
+        leereZelle.classList.add("sonntag")
+    }
+    zeile.appendChild(leereZelle); 
+}       
     kalenderBody.appendChild(zeile);
 
 }
-const textmonat = heute.getDate();
-const texttag   = heute.getMonth() +1;
-    const url =
-        `https://api.wikimedia.org/feed/v1/wikipedia/de/onthisday/events/${textmonat}/${texttag}`;
-            console.log(url);
-                fetch(url)
-                    .then(respone => respone.json())
-                        .then(daten => {
-                            console.log(daten.events)[0];
-    });
+    
+        
+  
 
 
-            
+
+
+
 
 
 
